@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Graph {
     private final List<Vertex> vertexes;
-    private final List<Edge> edges;
+    List<Edge> edges;
 
     public Graph(List<Vertex> vertexes, List<Edge> edges) {
         this.vertexes = vertexes;
@@ -52,7 +52,7 @@ public class Graph {
 
     public ArrayList<Vertex> getNeighbours(Vertex vertex) {
         // Returns all neighbours of a given vertex
-        // TODO: Implement this method
+
         ArrayList<Vertex> vertexList = new ArrayList<>();
         for(int i = 0; i<getEdges().size(); i++){
             if(edges.get(i).getDestination().equals(vertex)){
@@ -69,5 +69,6 @@ public class Graph {
         return null;
     }
 
+    }
 
-}
+
